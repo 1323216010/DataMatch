@@ -31,6 +31,6 @@ def getConfig():
     precision = config['rule']['precision']
     return vcmID, ActuatorSN, VCMDataPath, buildDataPath, precision
 
-def print1():
+def printVersion():
     print("DataMatch version is 20230922a")
     print("any question pls contact Pengcheng.yan@cowellchina.com")

@@ -1,12 +1,12 @@
 import os
 import pandas as pd
-from utils import print1
+from utils import printVersion
 from utils import get_file_paths
 from utils import getConfig
 from compute import getData
 from compute import compare
 
-print1()
+printVersion()
 vcmID, ActuatorSN, VCMDataPath, buildDataPath, precision = getConfig()
 
 total = 0
