@@ -1,14 +1,10 @@
 import re
 import pandas as pd
 import numpy as np
-from utils import check_path_type
-def getData(path):
-    df = pd.DataFrame()
+from utils import read_file_with_progress
 
-    if(check_path_type(path) == 'csv'):
-        df = pd.read_csv(path, header=0)
-    elif(check_path_type(path) == 'xlx' or check_path_type(path) == 'xlsx'):
-        df = pd.read_excel(path)
+def getData(path):
+    df = read_file_with_progress(path)
 
     # 过滤掉列名中包含'Unnamed'的列
     filtered_columns = [col for col in df.columns if not re.match(r'^Unnamed', col)]
