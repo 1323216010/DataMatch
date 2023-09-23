@@ -24,11 +24,11 @@ def check_path_type(path):
 def getConfig():
     config = ConfigParser()
     config.read(os.path.join(os.getcwd(), "config.ini"))
-    vcmID = config['BuildData']['ID']
-    ActuatorSN = config['VCMData']['ID']
+    vcmID = config['BuildData']['id']
+    ActuatorSN = config['VCMData']['id']
     VCMDataPath = config['VCMData']['path']
     buildDataPath = config['BuildData']['path']
-    precision = config['rule']['precision']
+    precision = config['Rule']['precision']
     return vcmID, ActuatorSN, VCMDataPath, buildDataPath, precision
 
 def printVersion():
